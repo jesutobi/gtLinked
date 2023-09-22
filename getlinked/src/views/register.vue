@@ -32,7 +32,7 @@
               <Starfour class="absolute top-0" />
               <div class="min-[992px]:pt-[8rem]">
                 <img
-                  src="@/assets/images/3d-graphic-designer-showing-thumbs-up-png 1.svg"
+                  src="@/assets/images/3d-graphic-designer-showing.svg"
                   alt=""
                   class="w-full max-[992px]:w-[20rem] mx-auto"
                 />
