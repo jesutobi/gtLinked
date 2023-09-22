@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* remove default margin ,padding,box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/montserrat-v25-latin-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserratbold";
+  src: url("./fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clashdisplaybold";
+  src: url("./fonts/ClashDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "unica";
+  src: url("./fonts/UnicaOne-Regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+.montFontLight {
+  font-family: "Montserrat" !important;
+}
+.montFontBold {
+  font-family: "Montserratbold" !important;
+}
+.clashBold {
+  font-family: "Clashdisplaybold" !important;
+}
+.unica {
+  font-family: "unica" !important;
+}
+.buttongradiet {
+  background-image: linear-gradient(to right, #fe34b9, #d434fe, #903aff);
+}
+/* input */
+input,
+textarea,
+select {
+  background-color: transparent !important;
+}
+input:focus {
+  border: 0.7px solid white !important;
+}
+select:focus {
+  border: 0.7px solid white !important;
+}
+textarea:focus {
+  border: 0.7px solid white !important;
+}
+input::placeholder {
+  color: white !important;
+}
+textarea::placeholder {
+  color: white !important;
+}
+/* form validation */
+.is-valid,
+.is-reset-valid {
+  outline: none !important;
+  border: 1px solid green;
+}
+
+.is-invalid,
+.is-reset-invalid {
+  outline: none !important;
+  border: 1px solid red !important;
+
+  color: #ff0000;
+}
+.button-enabled {
+  background-image: linear-gradient(
+    to right,
+    #fe34b9,
+    #d434fe,
+    #903aff
+  ) !important;
+  color: white !important;
+  background-color: red;
+}
+
+.button-disabled {
+  background-color: rgba(128, 128, 128, 0.501) !important;
+}
+a {
+  scroll-behavior: smooth !important;
+}
+#faq {
+}
