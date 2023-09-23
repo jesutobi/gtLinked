@@ -1,9 +1,12 @@
-[build]
-command ="npm run build"
-functions ="netlify/functions"
-publish ="dist"
 
-[[redirects]]
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist"
+
+  [[redirects]]
   from = "/*"
-  to = "/"
+ to = "/index.html"
   status = 200
+
+  
