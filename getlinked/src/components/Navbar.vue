@@ -94,7 +94,10 @@
         class="min-[768px]:hidden text-white bg-[#150E28] w-full h-[100vh] fixed"
       >
         <!-- buttons -->
-        <div class="text-sm container mx-auto px-[2rem]">
+        <div
+          @click="Cancel('hide')"
+          class="text-sm container mx-auto px-[2rem]"
+        >
           <div class="py-4 buttoncolor">
             <span>TImeline</span>
           </div>
