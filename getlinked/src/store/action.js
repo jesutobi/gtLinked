@@ -33,14 +33,26 @@ export async function Register({ commit }, payload) {
     errorMessage = err;
     throw errorMessage;
   }
-
-  // if (response.status === 200) {
-  //   commit("signUpAuth", {
-  //     email: response.data.email,
-  //     expiresIn: response.data.expiresIn,
-  //     token: response.data.idToken,
-  //     refreshToken: response.data.refreshToken,
-  //     userId: response.data.localId,
-  //   });
-  // }
+}
+// contact
+export async function Contact({ commit }, payload) {
+  let postontact = {
+    email: payload.email,
+    phone_number: payload.phone_number,
+    first_name: payload.first_name,
+    message: payload.message,
+  };
+  // try and catch error
+  let response = "";
+  let errorMessage = "";
+  try {
+    response = await axios.post(
+      `https://backend.getlinked.ai/hackathon/contact-form`,
+      postontact
+    );
+    console.log(response);
+  } catch (err) {
+    errorMessage = err;
+    throw errorMessage;
+  }
 }

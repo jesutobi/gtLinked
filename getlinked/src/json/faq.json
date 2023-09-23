@@ -1,29 +1,41 @@
 [
   {
     "title": "Can I work on a project I started before the hackathon?",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''"
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''",
+    "for": "collapse1",
+    "id": "collapse1"
   },
   {
     "title": "What happens if I need help during the hackathon?",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa."
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.",
+    "for": "collapse2",
+    "id": "collapse2"
   },
 
   {
     "title": "What happens if I don't have an idea for a project?",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa"
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa",
+    "for": "collapse3",
+    "id": "collapse3"
   },
 
   {
     "title": "Can I join a team or do I have to come with one?",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''"
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''",
+    "for": "collapse4",
+    "id": "collapse4"
   },
 
   {
     "title": "What happens after the hackathon ends",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''"
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''",
+    "for": "collapse5",
+    "id": "collapse5"
   },
   {
     "title": "Can I work on a project I started before the hackathon?",
-    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''"
+    "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ipsa.''",
+    "for": "collapse6",
+    "id": "collapse6"
   }
 ]

@@ -24,11 +24,13 @@
             <!-- nav buttons -->
             <div class="text-white flex items-center">
               <!-- ?timeline -->
-              <div
-                class="px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              <a href="#timeline">
+                <div
+                  class="px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  <span class="buttoncolor hover:font-bold">Timeline</span>
+                </div></a
               >
-                <span class="buttoncolor hover:font-bold">Timeline</span>
-              </div>
               <!-- overview -->
               <div
                 class="px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
@@ -36,7 +38,7 @@
                 <span class="buttoncolor hover:font-bold">Overview</span>
               </div>
               <!-- contact -->
-              <a href="#section1" @click="scrollToSection('#section1')">
+              <a href="#section1">
                 <div
                   class="px-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 >
@@ -110,7 +112,9 @@
           <!-- register button -->
           <router-link :to="{ name: 'register' }">
             <div class="py-4">
-              <button class="py-2 px-5 text-white buttongradiet">
+              <button
+                class="py-2 px-5 text-white buttongradiet transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+              >
                 <span>Register</span>
               </button>
             </div></router-link

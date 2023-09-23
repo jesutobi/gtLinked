@@ -125,7 +125,7 @@
                           @blur="validate"
                           v-model="phone_number"
                           id="tel"
-                          type="tel"
+                          type="number"
                           placeholder="Enter your phone number"
                           v-bind:class="{
                             'is-valid': validation.valid.phone_number,
@@ -347,7 +347,7 @@
                   <div class="py-4 flex justify-center text-sm">
                     <button
                       @click="register"
-                      class="py-2 px-5 w-[10rem] flex items-center text-white cursor-pointer buttongradiet"
+                      class="py-2 px-5 w-[10rem] cursor-pointer flex items-center justify-center text-white cursor-pointer buttongradiet"
                     >
                       <div>
                         <span>submit</span>

@@ -20,6 +20,9 @@
     <div id="section1">
       <Faq />
     </div>
+    <div id="">
+      <Timeline />
+    </div>
     <!--Prizes -->
     <div>
       <Prizes />
@@ -44,6 +47,7 @@ import Faq from "@/components/Faqs.vue";
 import Partners from "@/components/Partners.vue";
 import Privacy from "@/components/privacy.vue";
 import Prizes from "@/components/prizs.vue";
+import Timeline from "@/components/Timeline.vue";
 </script>
 
 <style></style>

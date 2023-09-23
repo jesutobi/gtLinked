@@ -23,53 +23,48 @@
                 </span>
               </div>
               <!-- accordion -->
-              <div>
-                <div
-                  id="accordion-flush"
-                  data-accordion="collapse"
-                  data-active-classes="bg-[#150E28] text-sm dark:bg-gray-900 text-gray-900 dark:text-white"
-                  data-inactive-classes="text-gray-500 dark:text-gray-400"
-                >
-                  <!-- <h2 id="accordion-flush-heading-1">
-                  <button
-                    type="button"
-                    class="flex items-center justify-between w-full text-sm py-5 font-medium text-left text-white border-b border-[#D434FE]"
-                    data-accordion-target="#accordion-flush-body-1"
-                    aria-expanded="true"
-                    aria-controls="accordion-flush-body-1"
-                  >
-                    <span class="text-sm">a</span>
+
+              <div
+                v-for="(list, index) in faq"
+                :key="index"
+                class="flex flex-wrap py-2 text-sm max-[568px]:text-xs border-b border-[#D434FE] text-white"
+              >
+                <div class="flex items-center justify-between w-full">
+                  <label class="grow px-4 py-2 font-medium" :for="list.for">{{
+                    list.title
+                  }}</label>
+                  <div>
                     <svg
-                      data-accordion-icon
-                      class="w-3 h-3 rotate-180 shrink-0"
-                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
-                      viewBox="0 0 10 6"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="mx-4 my-3 h-6 w-6 transition-all duration-200 peer-checked:rotate-45"
                     >
                       <path
-                        stroke="#D434FE"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"
+                        d="M12 6v12m6-6H6"
                       />
                     </svg>
-                  </button>
-                </h2> -->
-                  <!-- <div
-                  id="accordion-flush-body-2"
-                  class="hidden"
-                  aria-labelledby="text-sm accordion-flush-heading-1"
-                >
-                  <div class="py-3 border-b border-[#D434FE]">
-                    <p class="mb-2 text-white text-sm">
-                      {{ txt }}
-                    </p>
                   </div>
-                </div> -->
+                </div>
+                <input
+                  class="peer mx-4 my-2 h-0 w-0 appearance-none border text-slate-800 border-[#D434FE] accent-slate-600 opacity-0"
+                  type="checkbox"
+                  name="collapse"
+                  :id="list.id"
+                />
+
+                <div
+                  class="py-3 absolute -translate-y-full scale-75 scale-y-0 px-4 py-3 opacity-0 transition-all duration-200 peer-checked:relative peer-checked:translate-y-0 peer-checked:scale-100 peer-checked:scale-y-100 peer-checked:opacity-100"
+                >
+                  {{ list.text }}
                 </div>
               </div>
+
+              <div></div>
             </div>
             <!-- image -->
             <div class="max-[992px]:order-1">

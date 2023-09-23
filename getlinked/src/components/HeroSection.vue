@@ -20,7 +20,7 @@
             <div
               class="montFontBold min-[767px]:hidden text-white text-center max-[568px]:text-[1rem] max-[768px]:text-[1.5rem] p-4"
             >
-              <i>Igniting a Revolution in HR Innovation</i>
+              <i>{{ typeValue }}</i>
             </div>
             <Starfour class="absolute top-0" />
             <div
@@ -30,21 +30,8 @@
                 <div class="w-[35px] absolute left-[26rem] -top-5 right-0">
                   <img src="@/assets/icon/bulb.svg" alt="" class="w-full" />
                 </div>
-                <div class="gluey-text">
-                  <span>g</span>
-                  <span>e</span>
-                  <span>t</span>
-                  <span>l</span>
-                  <span>i</span>
-                  <span>n</span>
-                  <span>k</span>
-                  <span>e</span>
-                  <span>d</span>
-                  <span> </span>
-                  <span>T</span>
-                  <span>e</span>
-                  <span>c</span>
-                  <span>h</span>
+                <div cl>
+                  <span>getlinked Tech</span>
                 </div>
               </div>
               <div class="flex items-center max-[768px]:justify-center">
@@ -69,13 +56,15 @@
               </span>
             </div>
             <!-- register button -->
-            <div class="my-5">
-              <button
-                class="py-3 w-[8rem] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 px-5 text-sm text-white buttongradiet"
-              >
-                <span>Register</span>
-              </button>
-            </div>
+            <router-link :to="{ name: 'register' }">
+              <div class="my-5">
+                <button
+                  class="py-3 w-[8rem] px-5 text-sm text-white buttongradiet transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                >
+                  <span>Register</span>
+                </button>
+              </div></router-link
+            >
             <!-- time countdown -->
             <Starfive class="px-[7rem] right-0 absolute" />
             <div
@@ -110,10 +99,19 @@
           <!-- image -->
           <div>
             <!-- text -->
-            <div
-              class="montFontBold max-[768px]:hidden max-[992px]:text-[1.2rem] text-white text-center text-[1.5rem] p-4"
-            >
-              <i>Igniting a Revolution in HR Innovation</i>
+            <div class="flex justify-end">
+              <div
+                class="montFontBold max-[768px]:hidden max-[992px]:text-[1.2rem] text-white text-center text-[1.5rem] p-4"
+              >
+                <i>{{ typeValue }}</i>
+                <div class="flex justify-end">
+                  <img
+                    src="@/assets/icon/pink.svg"
+                    alt=""
+                    style="width: 200px"
+                  />
+                </div>
+              </div>
             </div>
             <Starthree class="abolute right-0" />
             <!-- image -->
@@ -149,6 +147,44 @@ import Starthree from "@/components/star/starthree.vue";
 import Starfour from "@/components/star/starfour.vue";
 import Starfive from "@/components/star/starfive.vue";
 </script>
+<script>
+import "animate.css";
+
+export default {
+  data: () => {
+    return {
+      typeValue: "",
+      typeStatus: false,
+      typeArray: ["Igniting a Revolution in HR Innovation"],
+      typingSpeed: 80,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      typeArrayIndex: 0,
+      charIndex: 0,
+    };
+  },
+  methods: {
+    typeText() {
+      if (this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+        if (!this.typeStatus) this.typeStatus = true;
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(
+          this.charIndex
+        );
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      } else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    // eraseText() {
+  },
+
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  },
+};
+</script>
 
 <style scoped>
 @keyframes spin-slow {
@@ -167,34 +203,22 @@ import Starfive from "@/components/star/starfive.vue";
   z-index: 99999 !important;
 }
 
-.gluey-text span {
+.gradient-text {
+  font-size: 48px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #fe34b9, #d434fe, #903aff);
+  background-clip: text;
+  color: transparent;
   display: inline-block;
-  transition: transform 1.5s ease;
+  animation: gradientAnimation 3s linear infinite alternate;
 }
 
-.gluey-text span:hover {
-  animation: bounce 1s;
-}
-
-@keyframes bounce {
-  0%,
+@keyframes gradientAnimation {
+  0% {
+    background-position: 100% 0%;
+  }
   100% {
-    transform: scaleX(1.4) scaleY(1);
-  }
-  30% {
-    transform: scaleX(1.25) scaleY(0.75);
-  }
-  40% {
-    transform: scaleX(0.75) scaleY(1.8);
-  }
-  50% {
-    transform: scaleX(1.15) scaleY(0.85);
-  }
-  65% {
-    transform: scaleX(0.95) scaleY(1.45);
-  }
-  75% {
-    transform: scaleX(0.8) scaleY(1.5);
+    background-position: 0% 100%;
   }
 }
 </style>
