@@ -120,7 +120,7 @@
               <!-- boy -->
               <div>
                 <img
-                  src="@/assets/images/man-wearing-smart-glasses-touching-virtual-screen1.svg"
+                  src="@/assets/images/man-wearing-smart-glasses-touching-virtual-screen1.png"
                   alt=""
                   class="w-full grayscale"
                 />
