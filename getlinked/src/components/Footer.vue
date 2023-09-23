@@ -54,9 +54,12 @@
               <div class="py-2">
                 <span> FAQs</span>
               </div>
-              <div class="py-2">
-                <span> Register</span>
-              </div>
+              <!-- register button -->
+              <router-link :to="{ name: 'register' }">
+                <div class="py-2">
+                  <span> Register</span>
+                </div></router-link
+              >
               <div class="py-2 flex items-center">
                 <div>
                   <span>Follow us </span>

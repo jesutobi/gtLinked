@@ -130,7 +130,7 @@
                       type="email"
                       required
                       placeholder="E-mail"
-                      class="border-white border-[0.5px] rounded text-white w-full text-sm max-[768px]:text-xs px-5 py-2"
+                      class="border-white border-[0.5px] rounded text-slate-600 w-full text-sm max-[768px]:text-xs px-5 py-2"
                     />
                   </div>
                   <!-- message -->

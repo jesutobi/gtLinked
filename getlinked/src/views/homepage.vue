@@ -20,7 +20,7 @@
     <div id="section1">
       <Faq />
     </div>
-    <div id="">
+    <div id="timeline">
       <Timeline />
     </div>
     <!--Prizes -->

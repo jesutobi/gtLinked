@@ -36,7 +36,7 @@
                 v-for="(item, index) in criteria"
                 :key="index"
               >
-                <span class="text-[#D434FE] montFontBold">
+                <span class="text-[#FF26B9] montFontBold">
                   {{ item.title }}
                 </span>
                 <span>
