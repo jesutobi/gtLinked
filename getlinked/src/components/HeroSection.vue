@@ -14,7 +14,7 @@
         <div class="grid md:grid-cols-2 gap-1">
           <!-- text -->
           <div
-            class="min-[993px]:mt-[7rem] max-[992px]:mt-[5rem] max-[768px]:mt-[2rem] max-[768px]:text-center zed"
+            class="min-[993px]:mt-[7rem] card-animation max-[992px]:mt-[5rem] max-[768px]:mt-[2rem] max-[768px]:text-center zed"
           >
             <!--  mobile text -->
             <div
@@ -97,7 +97,7 @@
             </div>
           </div>
           <!-- image -->
-          <div>
+          <div class="card-animation">
             <!-- text -->
             <div class="flex justify-end">
               <div
@@ -187,6 +187,22 @@ export default {
 </script>
 
 <style scoped>
+.card-animation {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popIn 0.5s ease-in-out forwards;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes spin-slow {
   0% {
     transform: rotate(0deg);
